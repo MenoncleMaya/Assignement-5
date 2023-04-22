@@ -11,10 +11,12 @@
 
 int main()
 {
+    bool room1[10][10];
     MovieSelector movieSelector;
     Salle salle1(false);
     bool arraySalle1[10][10];
     vector<Movie> movieList;
+    Salle salle(room1, false);
 
     const int nbProjections = 5;
     const int nbSalle = 3;
@@ -144,7 +146,7 @@ int main()
     }
 
 
-    salle1.printRoom(arraySalle1);
+    
 
     do {
         switch (choix) {
