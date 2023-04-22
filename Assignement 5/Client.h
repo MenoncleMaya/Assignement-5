@@ -8,8 +8,8 @@ class Client {
 public:
 	Client(string name, int id);
 	void AddMovieWatched(Movie movie);
-	string GetName();
 	int GetID();
+	string GetName();
 private:
 	int id;
 	string name;
