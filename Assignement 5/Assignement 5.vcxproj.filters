@@ -18,12 +18,12 @@
     <ClCompile Include="Assignement 5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Film.cpp">
+    <ClCompile Include="Projection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Film.h">
+    <ClInclude Include="Projection.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
