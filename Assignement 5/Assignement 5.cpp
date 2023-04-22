@@ -13,8 +13,14 @@ int main()
 {
     bool room1[10][10];
     MovieSelector movieSelector;
-    Salle salle1(room1, false);
+    Salle salle(room1, true);
+    room1[5][5] = false;
     vector<Movie> movieList;
+
+    salle.SelectSeats(room1);
+    salle.printRoom(room1);
+    cout << salle.Pricing(room1, 10) << "$\n";
+    cout << salle.seatAvailable(room1) << "\n";
 
     const int nbProjections = 5;
     const int nbSalle = 3;
