@@ -133,7 +133,6 @@
     <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="LinearQueue.cpp" />
     <ClCompile Include="LinkedList.cpp" />
-    <ClCompile Include="Movie.cpp" />
     <ClCompile Include="MovieSelector.cpp" />
     <ClCompile Include="Projection.cpp" />
   </ItemGroup>

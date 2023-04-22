@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Movie.h"
+#include <vector>
 
 class MovieSelector {
 
@@ -13,5 +14,9 @@ class MovieSelector {
 	vector<Movie> recommendRealisateurMovie(string realisateur);
 	vector<Movie> recommendDureeMovie(float duration);
 	vector<Movie> recommendClassificationMovie(string classification);
+
+private:
+
+	vector<Movie> movieList;
 
 };
