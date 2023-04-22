@@ -16,6 +16,7 @@ private :
 		CinemaRoom data;
 		Node* left;
 		Node* right;
+		Node* next;
 	};
 
 	Node* root;
