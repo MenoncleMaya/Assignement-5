@@ -6,11 +6,14 @@
 #include "Projection.h"
 #include "Movie.h"
 #include "MovieSelector.h"
+#include "Personnalisation.h"
 
 
 int main()
 {
     MovieSelector movieSelector;
+    Salle salle1(false);
+    bool arraySalle1[10][10];
 
     const int nbProjections = 5;
     const int nbSalle = 3;
@@ -19,7 +22,7 @@ int main()
     Movie movie1, movie2, movie3, movie4, movie5;
     movie1.titre = "Matrix";
     movie1.genre = "Science-Fiction";
-    movie1.acteur = "Keanu Reves";
+    movie1.acteur = "Keanu Reeves";
     movie1.realisateur = "Wachowski";
     movie1.duree = 136;
     movie1.classification = "+13";
@@ -57,6 +60,8 @@ int main()
         Projection("Jurassic Park", 20.00, 22.30, 3),
         Projection("Titanic", 21.00, 23.45, 2)
     };
+
+    salle1.printRoom(arraySalle1);
 
     do {
         switch (choix) {
