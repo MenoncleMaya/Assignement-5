@@ -1,5 +1,7 @@
 #include "LinkedList.h"
 
+//Partly done with Dara's code
+
 Node::Node(int data)
 {
 	this->data = data;

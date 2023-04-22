@@ -1,5 +1,7 @@
 #include "HashTable.h"
 
+//Partly done with Dara's code
+
 int HashTable::hash(int key)
 {
 	return key % size;

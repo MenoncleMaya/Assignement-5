@@ -133,8 +133,8 @@
     <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="LinearQueue.cpp" />
     <ClCompile Include="LinkedList.cpp" />
-    <ClCompile Include="Movie.cpp" />
     <ClCompile Include="MovieSelector.cpp" />
+    <ClCompile Include="Personnalisation.cpp" />
     <ClCompile Include="Pile.cpp" />
     <ClCompile Include="Projection.cpp" />
     <ClCompile Include="Reservation.cpp" />
@@ -148,6 +148,7 @@
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Movie.h" />
     <ClInclude Include="MovieSelector.h" />
+    <ClInclude Include="Personnalisation.h" />
     <ClInclude Include="Projection.h" />
     <ClInclude Include="Reservation.h" />
   </ItemGroup>
