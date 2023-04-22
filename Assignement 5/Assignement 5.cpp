@@ -14,6 +14,7 @@ int main()
     MovieSelector movieSelector;
     Salle salle1(false);
     bool arraySalle1[10][10];
+    vector<Movie> movieList;
 
     const int nbProjections = 5;
     const int nbSalle = 3;
@@ -29,31 +30,44 @@ int main()
     movie1.acteur = "Keanu Reeves";
     movie1.realisateur = "Wachowski";
     movie1.duree = 136;
-    movie1.classification = "+13";
+    movie1.classification = 13;
     movie2.titre = "Star Wars";
     movie2.genre = "Science-Fiction";
     movie2.acteur = "Mark Hamill";
     movie2.realisateur = "George Lucas";
     movie2.duree = 105;
-    movie2.classification = "+13";
+    movie2.classification = 13;
     movie3.titre = "Avengers";
     movie3.genre = "Science-Fiction";
     movie3.acteur = "Robert Downey Jr.";
     movie3.realisateur = "Stan Lee";
     movie3.duree = 143;
-    movie3.classification = "+13";
+    movie3.classification = 13;
     movie4.titre = "Jurassic Park";
     movie4.genre = "Aventure";
     movie4.acteur = "Richard Attenborough";
     movie4.realisateur = "Steven Spielberg";
     movie4.duree = 127;
-    movie4.classification = "+13";
+    movie4.classification = 13;
     movie5.titre = "Titanic";
     movie5.genre = "Romance";
     movie5.acteur = "Leonardo DiCaprio";
     movie5.realisateur = "James Cameron";
     movie5.duree = 194;
-    movie5.classification = "+8";
+    movie5.classification = 8;
+
+    movieSelector.addMovie(movie1);
+    movieSelector.addMovie(movie2);
+    movieSelector.addMovie(movie3);
+    movieSelector.addMovie(movie4);
+    movieSelector.addMovie(movie5);
+
+    movieList.push_back(movie1);
+    movieList.push_back(movie2);
+    movieList.push_back(movie3);
+    movieList.push_back(movie4);
+    movieList.push_back(movie5);
+
     
     Projection projectionsSalle1[nbProjections] = {
         Projection("Matrix", 14.0, 16.3, 1),
@@ -68,20 +82,62 @@ int main()
     cout << "\nQuel est votre type de film preferer?";
     cout << "\n1.Science-Fiction";
     cout << "\n2.Aventure";
-    cout << "\n3.Romance";
+    cout << "\n3.Romance\n";
     cin >> choixGenre;
     switch (choixGenre) {
         //Science-Fiction
     case 1: {
         genre = "Science-Fiction";
+        cout << "\nVous les films que vous l'on vous suggere :\n\n";
+        for (int i = 0; i < movieList.size(); i++) {
+            if (age >= movieList[i].classification && genre == movieList[i].genre) {
+                movieList[i].displayInfo();
+                cout << endl;
+            }
+        }
+        cout << "\nEt voici le reste des films que l'on vous suggere :\n\n";
+        for (int i = 0; i < movieList.size(); i++) {
+            if (age >= movieList[i].classification && genre != movieList[i].genre) {
+                movieList[i].displayInfo();
+                cout << endl;
+            }
+        }
     }break;
         //Action
     case 2: {
         genre = "Aventure";
+        cout << "\nVous les films que vous le droit de regarder :\n\n";
+        for (int i = 0; i < movieList.size(); i++) {
+            if (age >= movieList[i].classification && genre == movieList[i].genre) {
+                movieList[i].displayInfo();
+                cout << endl;
+            }
+        }
+        cout << "\nEt voici le reste des films que l'on vous suggere :\n\n";
+        for (int i = 0; i < movieList.size(); i++) {
+            if (age >= movieList[i].classification && genre != movieList[i].genre) {
+                movieList[i].displayInfo();
+                cout << endl;
+            }
+        }
     }break;
         //Romance
     case 3: {
         genre = "Romance";
+        cout << "\nVous les films que vous le droit de regarder :\n\n";
+        for (int i = 0; i < movieList.size(); i++) {
+            if (age >= movieList[i].classification && genre == movieList[i].genre) {
+                movieList[i].displayInfo();
+                cout << endl;
+            }
+        }
+        cout << "\nEt voici le reste des films que l'on vous suggere :\n\n";
+        for (int i = 0; i < movieList.size(); i++) {
+            if (age >= movieList[i].classification && genre != movieList[i].genre) {
+                movieList[i].displayInfo();
+                cout << endl;
+            }
+        }
     }break;
 
     default:{}break;

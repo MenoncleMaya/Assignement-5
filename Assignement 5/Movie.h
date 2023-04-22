@@ -13,7 +13,7 @@ public:
 	string acteur;
 	string realisateur;
 	int duree;
-	string classification;
+	int classification;
 
 	void displayInfo()
 	{
@@ -22,7 +22,7 @@ public:
 		cout << "Acteur Principal : " << acteur << endl;
 		cout << "Realisateur : " << realisateur << endl;
 		cout << "Duree du film : " << duree << " minutes" << endl;
-		cout << "Classification : " << classification << endl;
+		cout << "Classification : " << classification << " ans et plus " << endl;
 	}
 
 };

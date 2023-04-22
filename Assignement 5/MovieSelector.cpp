@@ -75,10 +75,10 @@ vector<Movie> MovieSelector::recommendDureeMovie(float duration) {
 }
 
 //Fonction de recommendation en fonction de la durée
-vector<Movie> MovieSelector::recommendClassificationMovie(string classification) {
+vector<Movie> MovieSelector::recommendClassificationMovie(int classification) {
 	vector<Movie> tempList;
 	for (int i = 0; movieList.size(); i++) {
-		if (movieList[i].classification == classification) {
+		if (movieList[i].classification >= classification) {
 			tempList.push_back(movieList[i]);
 		}
 	}

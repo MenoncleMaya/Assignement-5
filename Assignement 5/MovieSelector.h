@@ -5,7 +5,7 @@
 
 class MovieSelector {
 
-
+public:
 	void addMovie(Movie movie);
 	void removeMovie(string title);
 	void displayInfoMovie(string title);
@@ -13,7 +13,7 @@ class MovieSelector {
 	vector<Movie> recommendActorMovie(string acteur);
 	vector<Movie> recommendRealisateurMovie(string realisateur);
 	vector<Movie> recommendDureeMovie(float duration);
-	vector<Movie> recommendClassificationMovie(string classification);
+	vector<Movie> recommendClassificationMovie(int classification);
 
 private:
 
