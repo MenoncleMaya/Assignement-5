@@ -18,6 +18,10 @@ int main()
     const int nbProjections = 5;
     const int nbSalle = 3;
     int choix = 0;
+    int choixGenre = 0;
+    string nom;
+    string genre;
+    int age = 0;
 
     Movie movie1, movie2, movie3, movie4, movie5;
     movie1.titre = "Matrix";
@@ -51,15 +55,38 @@ int main()
     movie5.duree = 194;
     movie5.classification = "+8";
     
-
-
     Projection projectionsSalle1[nbProjections] = {
-        Projection("Matrix", 14.00, 16.30, 1),
-        Projection("Star Wars", 15.30, 18.00, 2),
-        Projection("Avengers", 18.00, 21.00, 1),
-        Projection("Jurassic Park", 20.00, 22.30, 3),
-        Projection("Titanic", 21.00, 23.45, 2)
+        Projection("Matrix", 14.0, 16.3, 1),
+        Projection("Star Wars", 15.3, 18.0, 2),
+        Projection("Avengers", 18.0, 21.0, 1),
+        Projection("Jurassic Park", 20.0, 22.3, 3),
+        Projection("Titanic", 21.00f, 23.45f, 2)
     };
+
+    cout << "Bonjour et Bienvenue au Cinema!\nPour commencer veuillez entrer votre age : ";
+    cin >> age;
+    cout << "\nQuel est votre type de film preferer?";
+    cout << "\n1.Science-Fiction";
+    cout << "\n2.Aventure";
+    cout << "\n3.Romance";
+    cin >> choixGenre;
+    switch (choixGenre) {
+        //Science-Fiction
+    case 1: {
+        genre = "Science-Fiction";
+    }break;
+        //Action
+    case 2: {
+        genre = "Aventure";
+    }break;
+        //Romance
+    case 3: {
+        genre = "Romance";
+    }break;
+
+    default:{}break;
+    }
+
 
     salle1.printRoom(arraySalle1);
 
