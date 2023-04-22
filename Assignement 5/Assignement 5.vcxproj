@@ -133,6 +133,8 @@
     <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="LinearQueue.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="Movie.cpp" />
+    <ClCompile Include="MovieSelector.cpp" />
     <ClCompile Include="Projection.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +143,8 @@
     <ClInclude Include="HashTable.h" />
     <ClInclude Include="LinearQueue.h" />
     <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="Movie.h" />
+    <ClInclude Include="MovieSelector.h" />
     <ClInclude Include="Projection.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
