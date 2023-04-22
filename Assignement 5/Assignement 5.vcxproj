@@ -128,11 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Assignement 5.cpp" />
+    <ClCompile Include="LinearQueue.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Projection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="LinearQueue.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Projection.h" />
   </ItemGroup>
