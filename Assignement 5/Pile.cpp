@@ -12,7 +12,7 @@ bool Pile::is_full() { // check if the pile is full
     return (top == MAX_SIZE - 1);
 }
 
-void Pile::push(int value) { // add an element to the top of the pile
+void Pile::push(Reservation value) { // add an element to the top of the pile
     if (is_full()) {
         cout << "Pile is full\n";
         return;
@@ -29,10 +29,10 @@ void Pile::pop() { // remove the top element from the pile
     top--;
 }
 
-int Pile::peek() { // return the top element of the pile
+Reservation Pile::peek() { // return the top element of the pile
     if (is_empty()) {
         cout << "Pile is empty\n";
-        return -1;
+        //return NULL; //DO NOT FORGET <---
     }
     return arr[top];
 }
