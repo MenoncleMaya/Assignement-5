@@ -1,9 +1,9 @@
 #include "Pile.h"
 
-Pile::Pile() 
-{ // constructor to initialize the pile
-    top = -1;
-}
+//Pile::Pile() 
+//{ // constructor to initialize the pile
+//    top = -1;
+//}
 
 bool Pile::is_empty() { // check if the pile is empty
     return (top == -1);
