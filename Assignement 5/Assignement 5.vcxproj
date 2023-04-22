@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Assignement 5.cpp" />
+    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="AVLTree.cpp" />
     <ClCompile Include="LinearQueue.cpp" />
     <ClCompile Include="LinkedList.cpp" />
