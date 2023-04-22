@@ -1,6 +1,7 @@
 #include "Pile.h"
 
-Pile::Pile() { // constructor to initialize the pile
+Pile::Pile() 
+{ // constructor to initialize the pile
     top = -1;
 }
 
