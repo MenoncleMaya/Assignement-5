@@ -130,6 +130,7 @@
     <ClCompile Include="Assignement 5.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="AVLTree.cpp" />
+    <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="LinearQueue.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Movie.cpp" />
@@ -139,6 +140,7 @@
   <ItemGroup>
     <ClInclude Include="AVLTree.h" />
     <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="HashTable.h" />
     <ClInclude Include="LinearQueue.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Movie.h" />
