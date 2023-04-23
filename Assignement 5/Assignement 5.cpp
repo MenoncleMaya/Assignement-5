@@ -13,8 +13,8 @@ int main()
 {
     bool room1[10][10];
     MovieSelector movieSelector;
-    Salle salle(room1, true);
-    room1[5][5] = false;
+    Salle salle(room1, false);
+    room1[5][5] = true;
     vector<Movie> movieList;
 
     salle.SelectSeats(room1);
