@@ -26,9 +26,13 @@ int main()
     const int nbSalle = 3;
     int choix = 0;
     int choixGenre = 0;
+    int choixAdmin = 0;
     string nom;
     string genre;
     int age = 0;
+
+    void Preferance(int age, string genre, vector<Movie> movieList, int choixGenre);
+    void ChoixAdmin(int choixAdmin);
 
     Movie movie1, movie2, movie3, movie4, movie5;
     movie1.titre = "Matrix";
@@ -83,6 +87,47 @@ int main()
         Projection("Titanic", 21.00f, 23.45f, 2)
     };
 
+    ChoixAdmin(choixAdmin);
+    Preferance(age,genre,movieList,choixGenre);
+
+
+
+    
+
+    do {
+        switch (choix) {
+
+        case 1: {
+
+        } break;
+
+        case 2: {
+
+
+        } break;
+
+        case 3: {
+
+        } break;
+
+        case 4: {
+
+        } break;
+
+        case 5: {
+
+        } break;
+
+        case 6: {
+
+        } break;
+
+        default: {} break;
+        }
+    } while (choix != 0);
+}
+
+void Preferance(int age, string genre, vector<Movie> movieList, int choixGenre) {
     cout << "Bonjour et Bienvenue au Cinema!\nPour commencer veuillez entrer votre age : ";
     cin >> age;
     cout << "\nQuel est votre type de film preferer?";
@@ -146,41 +191,34 @@ int main()
         }
     }break;
 
-    default:{}break;
+    default: {}break;
     }
+}
+
+void ChoixAdmin(int choixAdmin) {
+    int numEmployer = 69420;
+    int mpEmployer = 69420;
+    int entrerNum = 0;
+    int entrerMP = 0;
+    cout << "Bonjour et Bienvenue au cinema! \nVeuillez vous identifier :";
+    cout << "\n1. Client";
+    cout << "\n2. Employer\n";
+    cin >> choixAdmin;
+    switch (choixAdmin) {
+    case 1: {
+        break;
+    }break;
+    case 2: {
+        
+        cout << "\n\nVeuillez entrer votre num d'employer : ";
+        cin >> entrerNum;
+        if (entrerNum == numEmployer) {
 
 
-    
-
-    do {
-        switch (choix) {
-
-        case 1: {
-
-        } break;
-
-        case 2: {
-
-
-        } break;
-
-        case 3: {
-
-        } break;
-
-        case 4: {
-
-        } break;
-
-        case 5: {
-
-        } break;
-
-        case 6: {
-
-        } break;
-
-        default: {} break;
         }
-    } while (choix != 0);
+        else {
+
+        }
+    }break;
+    }
 }
