@@ -12,28 +12,39 @@ using namespace std;
 
 int main()
 {
-    bool room1[10][10];
-    MovieSelector movieSelector;
-    Salle salle(room1, false);
-    room1[5][5] = true;
-    vector<Movie> movieList;
-
-    salle.SelectSeats(room1);
-    salle.printRoom(room1);
-    cout << salle.Pricing(room1, 10) << "$\n";
-    cout << salle.seatAvailable(room1) << "\n";
-
     const int nbProjections = 5;
     const int nbSalle = 3;
+    const float prix = 10;
     int choix = 0;
     int choixGenre = 0;
     int choixAdmin = 0;
+    int numEmployer = 69420;
+    int mpEmployer = 69420;
+    int entrerNum = 0;
+    int entrerMP = 0;
     string nom;
     string genre;
     int age = 0;
 
+    bool room1[10][10];
+    bool room2[10][10];
+    bool room3[10][10];
+    Salle salle(room1, true);
+    Salle salle(room2, true);
+    Salle salle(room3, true);
+
+    MovieSelector movieSelector;
+    room1[5][5] = false;
+    vector<Movie> movieList;
+
+    salle.SelectSeats(room1);
+    salle.printRoom(room1);
+    cout << salle.Pricing(room1, prix) << "$\n";
+    cout << salle.seatAvailable(room1) << "\n";
+
+
+
     void Preferance(int age, string genre, vector<Movie> movieList, int choixGenre);
-    void ChoixAdmin(int choixAdmin);
 
     Movie movie1, movie2, movie3, movie4, movie5;
     movie1.titre = "Matrix";
@@ -88,7 +99,48 @@ int main()
         Projection("Titanic", 21.00f, 23.45f, 2)
     };
 
-    ChoixAdmin(choixAdmin);
+
+
+    cout << "Bonjour et Bienvenue au cinema! \nVeuillez vous identifier :";
+    cout << "\n1. Client";
+    cout << "\n2. Employer\n";
+    cin >> choixAdmin;
+    switch (choixAdmin) {
+    case 1: {
+        break;
+    }break;
+    case 2: {
+
+        cout << "\n\nVeuillez entrer votre num d'employer : ";
+        cin >> entrerNum;
+        if (entrerNum == numEmployer) {
+            cout << "\n\nVoici les informations du cinéma:\n";
+            cout << salle.seatAvailable(room1) << " ont été acheter dans la salle 1!\n";
+            cout << salle.seatAvailable(room2) << " ont été acheter dans la salle 2!\n";
+            cout << salle.seatAvailable(room3) << " ont été acheter dans la salle 3!\n";
+            cout << "Pour un total de : " << salle.seatAvailable(room1) + salle.seatAvailable(room2) + salle.seatAvailable(room3) << " billets vendu!\n\n\n";
+            cout << "Voici les informations pour les films : ";
+            for (int i = 0; i < movieList.size(); i++) {
+                movieList[i].displayInfo();
+                cout << endl;
+            }
+            cout << "\n\n\nVoici les informations sur la Programmation:\n";
+            for (int i = 0; i < nbProjections; i++) {
+                cout << "-=-=-=-=-= Film " << i + 1 << "=-=-=-=-=-";
+                cout << "Titre : " << projectionsSalle1[i].getFilm();
+                cout << "Heure de debut : " << projectionsSalle1[i].getHeureDebut() << " heure";
+                cout << "Heure de fin : " << projectionsSalle1[i].getHeureFin() << " heure";
+                cout << "Dans la salle : " << projectionsSalle1[i].getSalle();
+            }
+
+        }
+        else {
+
+        }
+    }break;
+    }
+
+
     Preferance(age,genre,movieList,choixGenre);
 
 
@@ -193,33 +245,5 @@ void Preferance(int age, string genre, vector<Movie> movieList, int choixGenre) 
     }break;
 
     default: {}break;
-    }
-}
-
-void ChoixAdmin(int choixAdmin) {
-    int numEmployer = 69420;
-    int mpEmployer = 69420;
-    int entrerNum = 0;
-    int entrerMP = 0;
-    cout << "Bonjour et Bienvenue au cinema! \nVeuillez vous identifier :";
-    cout << "\n1. Client";
-    cout << "\n2. Employer\n";
-    cin >> choixAdmin;
-    switch (choixAdmin) {
-    case 1: {
-        break;
-    }break;
-    case 2: {
-        
-        cout << "\n\nVeuillez entrer votre num d'employer : ";
-        cin >> entrerNum;
-        if (entrerNum == numEmployer) {
-
-
-        }
-        else {
-
-        }
-    }break;
     }
 }
