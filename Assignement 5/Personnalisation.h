@@ -2,18 +2,19 @@
 
 #include <iostream>
 #include "Validation.h"
+#include "Projection.h"
 
 using namespace std;
 
 class Salle
 {
 	private:
-
+		Projection proj;
 	float const AJUSTEMENT{ 0.5 };
 
 	public:	
 
-	Salle(bool RoomArray[10][10], bool defaultValue);
+	Salle(bool RoomArray[10][10], bool defaultValue, Projection proj);
 
 	void printRoom(bool RoomArray[10][10]);
 

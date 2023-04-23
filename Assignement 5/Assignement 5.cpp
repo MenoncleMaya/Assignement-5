@@ -26,13 +26,6 @@ int main()
     string genre;
     int age = 0;
 
-    bool room1[10][10];
-    bool room2[10][10];
-    bool room3[10][10];
-    Salle salle(room1, true);
-    Salle salle(room2, true);
-    Salle salle(room3, true);
-
     MovieSelector movieSelector;
     room1[5][5] = false;
     vector<Movie> movieList;
@@ -99,7 +92,16 @@ int main()
         Projection("Titanic", 21.00f, 23.45f, 2)
     };
 
-
+    bool room1pt1[10][10];
+    bool room2pt1[10][10];
+    bool room3pt1[10][10];
+    bool room1pt2[10][10];
+    bool room2pt2[10][10];
+    Salle salle(room1pt1, true, Projection("Matrix", 14.0, 16.3, 1));
+    Salle salle(room2pt1, true, Projection("Star Wars", 15.3, 18.0, 2));
+    Salle salle(room3pt1, true, Projection("Avengers", 18.0, 21.0, 1));
+    Salle salle(room1pt2, true, Projection("Jurassic Park", 20.0, 22.3, 3);
+    Salle salle(room2pt2, true, Projection("Titanic", 21.00f, 23.45f, 2);
 
     cout << "Bonjour et Bienvenue au cinema! \nVeuillez vous identifier :";
     cout << "\n1. Client";
@@ -115,10 +117,10 @@ int main()
         cin >> entrerNum;
         if (entrerNum == numEmployer) {
             cout << "\n\nVoici les informations du cinéma:\n";
-            cout << salle.seatAvailable(room1) << " ont été acheter dans la salle 1!\n";
-            cout << salle.seatAvailable(room2) << " ont été acheter dans la salle 2!\n";
-            cout << salle.seatAvailable(room3) << " ont été acheter dans la salle 3!\n";
-            cout << "Pour un total de : " << salle.seatAvailable(room1) + salle.seatAvailable(room2) + salle.seatAvailable(room3) << " billets vendu!\n\n\n";
+            cout << salle.seatAvailable(room1pt1) << " ont été acheter dans la salle 1!\n";
+            cout << salle.seatAvailable(room2pt1) << " ont été acheter dans la salle 2!\n";
+            cout << salle.seatAvailable(room3pt1) << " ont été acheter dans la salle 3!\n";
+            cout << "Pour un total de : " << salle.seatAvailable(room1pt1) + salle.seatAvailable(room2pt1) + salle.seatAvailable(room3pt1) << " billets vendu!\n\n\n";
             cout << "Voici les informations pour les films : ";
             for (int i = 0; i < movieList.size(); i++) {
                 movieList[i].displayInfo();

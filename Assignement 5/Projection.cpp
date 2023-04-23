@@ -6,6 +6,8 @@
 Projection::Projection(string film, float heureDebut, float heureFin, int salle) :
 	film_(film), heureDebut_(heureDebut), heureFin_(heureFin), salle_(salle){}
 
+Projection::~Projection() {}
+
 string Projection::getFilm() {
 	return film_;
 }

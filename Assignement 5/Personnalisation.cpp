@@ -1,8 +1,9 @@
 #include "Personnalisation.h"
 
 
-Salle::Salle(bool RoomArray[10][10], bool defaultValue)
+Salle::Salle(bool RoomArray[10][10], bool defaultValue, Projection proj)
 {
+	this->proj = proj;
 	for (int i = 0; i < 10; i++)
 	{
 		for (int y = 0; y < 10; y++)

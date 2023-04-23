@@ -1,16 +1,19 @@
 #pragma once
 #include "Client.h"
 #include "Ticket.h"
+#include <list>
 
-//class Reservation
-//{
-//public:
-//	Reservation(int id, Client client, Ticket ticket);
-//	~Reservation();
-//
-//private:
-//	int id;
-//	Client client;
-//	Ticket ticket;
-//
-//};
+class Reservation
+{
+public:
+	Reservation();
+	~Reservation();
+
+	void AddTicket(Ticket ticket);
+	void DisplayTicket();
+
+private:
+	double Total;
+	list<Ticket> tickets;
+
+};

@@ -1,8 +1,15 @@
 #include "Reservation.h"
 
-//Reservation::Reservation(int id, Client client, Ticket ticket){
-//	this->id = id;
-//	this->client = client;
-//	this->ticket = ticket;
-//}
-//Reservation::~Reservation() {}
+Reservation::Reservation(){}
+Reservation::~Reservation(){}
+
+void Reservation::AddTicket(Ticket ticket) {
+	this->tickets.push_back(ticket);
+}
+
+void Reservation::DisplayTicket() {
+	for each (Ticket t in tickets)
+	{
+		cout << t.movie << " seats : " << t.SeatCol << " " << t.SeatRow << endl << "Room: " << t.salle << endl << "price: " << t.price << endl;
+	}
+}

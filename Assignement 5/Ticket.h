@@ -4,10 +4,10 @@
 
 class Ticket {
 public:
-	
-private:
-	int id;
-	Salle salle;
+	Ticket(string movie, string salle, int row, int col, float price);
+	string movie;
+	string salle;
 	int SeatRow;
 	int SeatCol;
+	float price;
 };

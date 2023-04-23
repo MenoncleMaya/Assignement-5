@@ -8,6 +8,9 @@ class Projection {
 
 public:
 	Projection(string film, float heureDebut, float heureFin, int salle);
+
+	~Projection();
+
 	string getFilm();
 	float getHeureDebut();
 	float getHeureFin();
