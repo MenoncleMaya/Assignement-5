@@ -8,6 +8,7 @@
 #include "MovieSelector.h"
 #include "Personnalisation.h"
 
+using namespace std;
 
 int main()
 {
