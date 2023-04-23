@@ -9,6 +9,10 @@
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="MovieSelector.cpp" />
     <ClCompile Include="Projection.cpp" />
+    <ClCompile Include="Personnalisation.cpp" />
+    <ClCompile Include="Pile.cpp" />
+    <ClCompile Include="Reservation.cpp" />
+    <ClCompile Include="ReservationManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Assignement 5.cpp">
@@ -35,9 +39,6 @@
     <ClCompile Include="AVLTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Movie.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MovieSelector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -47,35 +48,8 @@
     <ClCompile Include="HashTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Pile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Reservation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinaryTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LinearQueue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Projection.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AVLTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Movie.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MovieSelector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AVLTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -83,9 +57,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Projection.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HashTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AVLTree.h" />
@@ -99,11 +70,17 @@
     <ClInclude Include="HashTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Pile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Reservation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="AVLTree.h" />
+    <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="HashTable.h" />
+    <ClInclude Include="Pile.h" />
+    <ClInclude Include="LinearQueue.h" />
+    <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="Movie.h" />
+    <ClInclude Include="MovieSelector.h" />
+    <ClInclude Include="Personnalisation.h" />
+    <ClInclude Include="Projection.h" />
+    <ClInclude Include="Reservation.h" />
+    <ClInclude Include="ReservationManager.h" />
   </ItemGroup>
 </Project>
