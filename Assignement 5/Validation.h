@@ -3,9 +3,13 @@
 
 using namespace std;
 
-class Validation
+static class Validation
 {
-	int inputValidation(int nbr);
+	public:
 
-	int inputValidation(int nbr, int max, int min);
+	static int inputValidation(int nbr);
+
+	static int inputValidation(int nbr, int max, int min);
+
+	static bool inputValidation(bool nbr);
 };

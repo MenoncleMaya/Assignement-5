@@ -1,5 +1,6 @@
 #include "Personnalisation.h"
 
+
 Salle::Salle(bool RoomArray[10][10], bool defaultValue)
 {
 	for (int i = 0; i < 10; i++)
@@ -155,6 +156,7 @@ int Salle::SelectCol(bool RoomArray[10][10])
 	cout << "Column : ";
 	SetTextColor(TextColor::WHITE);
 	cin >> col;
+	Validation::inputValidation(col);
 
 	return col;
 }
@@ -167,6 +169,7 @@ int Salle::SelectRow(bool RoomArray[10][10])
 	cout << "Rows : ";
 	SetTextColor(TextColor::WHITE);
 	cin >> row;
+	Validation::inputValidation(row);
 
 	return row;
 }
@@ -189,6 +192,7 @@ void Salle::SelectSeats(bool RoomArray[10][10])
 			cout << "[0] No\n";
 			cout << "--> ";
 			cin >> isBuying;
+			Validation::inputValidation(isBuying);
 			cout << "\n";
 		}
 
